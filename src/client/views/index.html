@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NLP article evaluation</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header>
+        <img src="../assets/cat.jpg" alt="logo" class="logo" />
+        <div class="heading">
+          NLP Article Evaluation
+        </div>
+      </header>
+
+      <main class="main_container">
+        <section class="info_container">
+          <div class="nlp_info">
+            <p>
+              Natural language processing (NLP) is a subfield of computer
+              science, information engineering, and artificial intelligence
+              concerned with the interactions between computers and human
+              (natural) languages, in particular how to program computers to
+              process and analyze large amounts of natural language data.
+            </p>
+          </div>
+        </section>
+
+        <section class="form_container">
+          <form class="url_form" onsubmit="return Client.handleSubmit(event)">
+            <input
+              id="url"
+              type="text"
+              name="input"
+              placeholder="Complete URL of the article"
+            />
+            <input type="submit" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)"/>
+          </form>
+        </section>
+        <hr>
+        <section class="result_container">
+          <strong>Results:</strong>
+          <div id="results"></div>
+        </section>
+      </main>
+
+      <footer>
+        <p>Made with 🍷 by Gowthamaraj</p>
+      </footer>
+    </div>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js').then(registration =>{
+              console.log('SW registered successfuly: ', registration);
+          });
+      });
+      }else{
+      console.log("Service Working not supported");
+          }
+</script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+html{
+    font-size: 10px;
+    text-align: center;
+}
+body{
+    background-color: $body-bg-color;
+}
+.wrapper{
+    max-width: 70rem;
+    min-height: 90vh;
+    margin: auto auto;
+    background-color: $wrapper-bg-color;
+    border-radius: .5rem;
+    position: relative;
+}

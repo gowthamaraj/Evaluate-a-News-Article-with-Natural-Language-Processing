@@ -1,0 +1,51 @@
+@import 'variables';
+@import 'base';
+@import 'header';
+@import 'footer';
+
+.info_container{
+    font-size: $info-font-size;
+    color: white;
+}
+
+%rounded {
+    border-radius: 0.3rem;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.url_form{
+    margin-bottom: 1rem;
+    #url{
+        width: 50%;
+        margin: 0 .5rem;
+        @extend %rounded;
+    }
+    input[type=submit]{
+        @extend %rounded;
+        background-color: #02B3E4;
+        border-width: 0;
+        margin: 0;
+    }
+}
+
+.result_container{
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+    strong{
+        color: #FFAE0C;
+    }
+    #results{
+        color: whitesmoke;
+        text-align: start;
+        margin-left: 0.5rem;
+        p:first-child{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        span{
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #02CCBA;
+        }
+    }
+}
